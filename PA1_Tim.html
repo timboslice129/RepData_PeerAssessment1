@@ -252,13 +252,6 @@ hist(total_complete, main = &quot;Histogram of Total steps per day&quot;, xlab =
 <div id="are-there-differences-in-activity-patterns-between-weekdays-and-weekends" class="section level2">
 <h2>Are there differences in activity patterns between weekdays and weekends?</h2>
 <p>Converting date variable from factor to date format using the lubridate package:</p>
-<pre class="r"><code>library(lubridate)</code></pre>
-<pre><code>## Warning: package 'lubridate' was built under R version 3.5.3</code></pre>
-<pre><code>## 
-## Attaching package: 'lubridate'</code></pre>
-<pre><code>## The following object is masked from 'package:base':
-## 
-##     date</code></pre>
 <pre class="r"><code>activity_complete$date &lt;- ymd(activity_complete$date)</code></pre>
 <p>Use weekdays() function to find day of the week and then add a two level weekend/weekday factor variable to our data frame:</p>
 <pre class="r"><code>DayoftheWeek &lt;- weekdays(activity_complete$date)

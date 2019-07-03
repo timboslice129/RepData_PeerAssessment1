@@ -96,8 +96,10 @@ Mean and median values have not changed in the imputed dataset compared to the o
 ## Are there differences in activity patterns between weekdays and weekends?
 
 Converting date variable from factor to date format using the lubridate package:
-```{r}
+```{r include=FALSE}
 library(lubridate)
+```
+```{r}
 activity_complete$date <- ymd(activity_complete$date)
 ```
 Use weekdays() function to find day of the week and then add a two level weekend/weekday factor variable to our data frame:
